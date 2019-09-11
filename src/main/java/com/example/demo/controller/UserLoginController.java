@@ -33,6 +33,13 @@ public class UserLoginController {
 		return "redirect:/registerUser";
 	}
 	
+	/**
+	 * ログインする
+	 * @param form
+	 * @param result
+	 * @param model
+	 * @return　
+	 */
 	@RequestMapping("/userLogin")
 	public String UserLogin(RegisterUserForm form, BindingResult result, Model model) {
 		
