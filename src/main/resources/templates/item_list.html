@@ -55,12 +55,12 @@ xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 						<div class="panel-title">商品を検索する</div>
 					</div>
 					<div class="panel-body">
-						<form method="post" action="#" class="form-horizontal" th:action="@{/showItemList}">
+						<form method="post" action="#" class="form-horizontal" th:action="@{/showItemList/serch}">
 							<div class="form-group">
 								<label for="code" class="control-label col-sm-2">商品名</label>
 								<div class="col-sm-9">
-									<input type="text" name="code" id="code"
-										class="form-control input-sm" />
+									<input type="text" name="name" id="code"
+										class="form-control input-sm" >
 								</div>
 							</div>
 							<div class="text-center">
@@ -82,11 +82,11 @@ xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 						<tr th:each="item:${itemList}">
 
 							<th>
-								<a th:href="${item.id}">
+								<a th:href="@{'/showDetail?id=' + ${item.id}}">
 									<img th:src="@{/img/} + ${item.imagePath}"
 										class="img-responsive img-rounded" width="200" height="600">
 								</a><br>
-								<a th:href="${item.name}">じゃがバターベーコン</a><br>
+								<a th:href="@{/showDetail}" th:text="${item.name}">じゃがバターベーコン</a><br>
 								<span class="price" th:text="${item.priceM}"></span>(税抜)<br>
 								<span class="price" th:text="${item.priceL}"></span>(税抜)<br>
 							</th>
