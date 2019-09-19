@@ -42,7 +42,7 @@ public class ItemRepository {
 	}
 	
 	/**
-	 * 
+	 * 商品の詳細
 	 * @param id
 	 * @return
 	 */

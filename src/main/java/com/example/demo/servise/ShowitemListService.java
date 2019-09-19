@@ -23,6 +23,7 @@ public class ShowitemListService {
 	
 	
 	/**
+	 * 商品の詳細
 	 * @param id
 	 * @return
 	 */
